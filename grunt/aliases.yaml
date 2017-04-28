@@ -1,0 +1,5 @@
+# Default task
+default:
+- 'checktextdomain'
+- 'makepot'
+- 'uglify'

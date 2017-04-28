@@ -1,0 +1,23 @@
+{
+  "name":         "wearerequired/js-comment-form-validation",
+  "description":  "Simple comment form validation based on the jQuery Validation plugin.",
+  "type":         "wordpress-plugin",
+  "license":      "GPL-2.0+",
+  "authors":      [
+    {
+      "name":     "required",
+      "email":    "support@required.ch",
+      "homepage": "https://required.com",
+      "role":     "Developer"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url":  "https://wpackagist.org"
+    }
+  ],
+  "require":      {
+    "php": ">=5.6"
+  }
+}
