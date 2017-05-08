@@ -9,6 +9,7 @@
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: js-comment-form-validation
+ * Domain Path: /languages
  *
  * Copyright (c) 2017 required (email: info@required.ch)
  *
