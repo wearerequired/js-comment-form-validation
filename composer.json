@@ -1,21 +1,28 @@
 {
-  "name":         "wearerequired/js-comment-form-validation",
-  "description":  "Simple comment form validation based on the jQuery Validation plugin.",
-  "type":         "wordpress-plugin",
-  "license":      "GPL-2.0+",
-  "authors":      [
+  "name": "wearerequired/js-comment-form-validation",
+  "description": "WordPress plugin to add simple comment form validation based on the jQuery Validation plugin.",
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/wearerequired/js-comment-form-validation",
+  "license": "GPL-2.0-or-later",
+  "authors": [
     {
-      "name":     "required",
-      "email":    "support@required.ch",
+      "name": "required",
+      "email": "info@required.ch",
       "homepage": "https://required.com",
-      "role":     "Developer"
+      "role": "Company"
+    },
+    {
+      "name": "Pascal Birchler",
+      "email": "pascal@required.ch",
+      "role": "Developer"
     }
   ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url":  "https://wpackagist.org"
-    }
+  "keywords": [
+    "wordpress",
+    "comments",
+    "comment-form",
+    "validation",
+    "jquery"
   ],
   "require":      {
     "php": ">=5.6"
