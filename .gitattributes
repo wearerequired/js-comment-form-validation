@@ -3,5 +3,6 @@
 /.editorconfig export-ignore
 /package.json export-ignore
 /phpcs.ruleset.xml export-ignore
+/Gruntfile.js export-ignore
 /languages/js-comment-form-validation.pot export-ignore
 /grunt export-ignore
