@@ -3,7 +3,7 @@
  * Plugin Name: JS Comment Form Validation
  * Plugin URI:  https://github.com/wearerequired/js-comment-form-validation
  * Description: Simple comment form validation based on the jQuery Validation plugin.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      required
  * Author URI:  https://required.com
  * License:     GPL-2.0+
@@ -36,7 +36,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require __DIR__ . '/vendor/autoload.php';
 }
 
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 
 function load_textdomain() {
 	load_plugin_textdomain( 'js-comment-form-validation', false, basename( __DIR__ ) . '/languages' );
