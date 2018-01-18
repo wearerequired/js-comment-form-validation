@@ -50,7 +50,7 @@ add_action( 'init', __NAMESPACE__ . '\load_textdomain' );
  * @since 1.0.0
  */
 function enqueue_scripts() {
-	wp_register_script( 'jquery-validation', plugin_dir_url( __FILE__ ) . 'js/jquery.validate.min.js', [ 'jquery' ], '1.16.0' );
+	wp_register_script( 'jquery-validation', plugin_dir_url( __FILE__ ) . 'js/jquery.validate.min.js', [ 'jquery' ], '1.16.0', true );
 
 	$suffix = SCRIPT_DEBUG ? '' : '.min';
 
