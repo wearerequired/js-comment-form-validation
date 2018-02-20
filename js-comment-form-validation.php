@@ -66,11 +66,11 @@ function enqueue_scripts() {
 		],
 		'rules'    => [
 			'author'  => [
-				'required'  => true,
+				'required'  => (bool) get_option( 'require_name_email' ),
 				'minlength' => 2,
 			],
 			'email'   => [
-				'required' => true,
+				'required' => (bool) get_option( 'require_name_email' ),
 				'email'    => true,
 			],
 			'url'     => [
