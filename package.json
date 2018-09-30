@@ -1,25 +1,27 @@
 {
-  "name":            "js-comment-form-validation",
-  "title":           "Simple comment form validation based on the jQuery Validation plugin.",
-  "version":         "1.0.0",
-  "homepage":        "https://required.com",
-  "license":         "GPL-2.0+",
-  "author":          {
-    "name":  "required+",
+  "name": "js-comment-form-validation",
+  "title": "Simple comment form validation based on the jQuery Validation plugin.",
+  "version": "1.0.0",
+  "homepage": "https://required.com",
+  "license": "GPL-2.0+",
+  "author": {
+    "name": "required+",
     "email": "support@required.ch",
-    "url":   "https://required.com"
+    "url": "https://required.com"
   },
-  "repository":      {
+  "repository": {
     "type": "git",
-    "url":  "https://github.com/wearerequired/js-comment-form-validation"
+    "url": "https://github.com/wearerequired/js-comment-form-validation"
   },
   "devDependencies": {
-    "grunt":                 "~1.0.0",
-    "grunt-checktextdomain": "~1.0.0",
-    "grunt-contrib-uglify":  "~2.3.0",
-    "grunt-wp-i18n":         "~1.0.0",
-    "load-grunt-config":     "~0.19.0",
-    "time-grunt":            "~1.4.0"
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "uglify-js": "^3.4.9"
   },
-  "keywords":        []
+  "scripts": {
+    "uglifyjs": "find assets/js -type f -name '*.js' ! -name '*.min.js' -maxdepth 1 | while read FILE ; do uglifyjs \"${FILE}\" -o \"${FILE%.js}.min.js\" ; done",
+    "build": "babel assets/js/src -d assets/js && npm run uglifyjs",
+    "watch": "nodemon --watch assets/js/src -e js -x 'npm run build'"
+  }
 }
