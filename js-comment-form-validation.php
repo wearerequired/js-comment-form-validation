@@ -3,13 +3,12 @@
  * Plugin Name: JS Comment Form Validation
  * Plugin URI:  https://github.com/wearerequired/js-comment-form-validation
  * Description: Simple comment form validation based on the jQuery Validation plugin.
- * Version:     1.1.0
+ * Version:     1.2.0
  * Author:      required
  * Author URI:  https://required.com
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: js-comment-form-validation
- * Domain Path: /languages
  *
  * Copyright (c) 2017 required (email: info@required.ch)
  *
@@ -32,17 +31,28 @@
 
 namespace Required\JSCommentFormValidation;
 
+use function Required\Traduttore_Registry\add_project;
+
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require __DIR__ . '/vendor/autoload.php';
 }
 
-const VERSION = '1.1.0';
+const VERSION = '1.2.0';
 
-function load_textdomain() {
-	load_plugin_textdomain( 'js-comment-form-validation', false, basename( __DIR__ ) . '/languages' );
+/**
+ * Sets up translation downloads for the plugin.
+ *
+ * @since 1.2.0
+ */
+function init_traduttore() {
+	add_project(
+		'plugin',
+		'js-comment-form-validation',
+		'https://translate.required.com/api/translations/required/js-comment-form-validation/'
+	);
 }
 
-add_action( 'init', __NAMESPACE__ . '\load_textdomain' );
+add_action( 'init', __NAMESPACE__ . '\init_traduttore' );
 
 /**
  * Registers and enqueues the comment validation scripts.
@@ -50,11 +60,11 @@ add_action( 'init', __NAMESPACE__ . '\load_textdomain' );
  * @since 1.0.0
  */
 function enqueue_scripts() {
-	wp_register_script( 'jquery-validation', plugin_dir_url( __FILE__ ) . 'js/jquery.validate.min.js', [ 'jquery' ], '1.16.0', true );
+	wp_register_script( 'jquery-validation', plugin_dir_url( __FILE__ ) . 'assets/js/vendor/jquery.validate.min.js', [ 'jquery' ], '1.16.0', true );
 
 	$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-	wp_register_script( 'js-comment-form-validation', plugin_dir_url( __FILE__ ) . 'js/js-comment-form-validation' . $suffix . '.js', [ 'jquery-validation' ], VERSION, true );
+	wp_register_script( 'js-comment-form-validation', plugin_dir_url( __FILE__ ) . 'assets/js/js-comment-form-validation' . $suffix . '.js', [ 'jquery-validation' ], VERSION, true );
 
 	$settings = [
 		'messages' => [
