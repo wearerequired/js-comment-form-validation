@@ -48,7 +48,7 @@ function init_traduttore() {
 	add_project(
 		'plugin',
 		'js-comment-form-validation',
-		'https://translate.example.com/api/translations/required/js-comment-form-validation/'
+span class="pl-s1"> 		'https://translate.required.com/api/translations/required/js-comment-form-validation/'
 	);
 }
 
