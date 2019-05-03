@@ -26,6 +26,6 @@
   ],
   "require":      {
     "php": ">=5.6",
-    "wearerequired/traduttore-registry": "^1.0"
+    "wearerequired/traduttore-registry": "^2.0"
   }
 }
