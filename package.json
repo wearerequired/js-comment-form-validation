@@ -14,10 +14,10 @@
     "url": "https://github.com/wearerequired/js-comment-form-validation"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "uglify-js": "^3.4.9"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "uglify-js": "^3.6.0"
   },
   "scripts": {
     "uglifyjs": "find assets/js -type f -name '*.js' ! -name '*.min.js' -maxdepth 1 | while read FILE ; do uglifyjs \"${FILE}\" -o \"${FILE%.js}.min.js\" ; done",
